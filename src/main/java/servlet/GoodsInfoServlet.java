@@ -36,6 +36,7 @@ public class GoodsInfoServlet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String action = req.getParameter("action");
         IGoodsInfoService goodsService = new GoodsInfoService();
+        System.out.println(124151525);
         IPage pageService = new IPageImpl();
         switch (action) {
             case "getPage":
