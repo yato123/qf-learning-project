@@ -7,5 +7,4 @@ public interface IGoodsInfoService {
     boolean delete(Integer id);
     boolean update(GoodsInfo goodsInfo);
     GoodsInfo query(Integer id);
-
 }

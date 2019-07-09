@@ -36,7 +36,6 @@ public class GoodsInfoServlet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String action = req.getParameter("action");
         IGoodsInfoService goodsService = new GoodsInfoService();
-        System.out.println(124151525);
         IPage pageService = new IPageImpl();
         switch (action) {
             case "getPage":
@@ -47,11 +46,8 @@ public class GoodsInfoServlet extends HttpServlet {
                 req.setAttribute("page",page);
                 req.getRequestDispatcher("queryall.jsp").forward(req,resp);
                 break;
-            case "buy":
-
+            case "insert":
                 GoodsInfo goods = getGoods(req);
-
-
                 if (goodsService.insert(goods)){
                     req.setAttribute("msg", "添加成功");
                     resp.sendRedirect("GoodsInfoServlet?action=getPage");
