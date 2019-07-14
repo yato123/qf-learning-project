@@ -9,7 +9,7 @@
 <html>
 <head>
     <title>Title</title>
-    <script type="text/javascript"src="js/jquery-1.8.2.js"></script>
+    <script type="text/javascript"src="../../js/jquery-1.8.2.js"></script>
     <script type="text/javascript">
     </script>
     <style type="text/css">
@@ -17,7 +17,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            background-image: url("images/yr.jpg");
+            background-image: url("../../images/yr.jpg");
         }
         table{
             font-size: 50px;
@@ -28,10 +28,10 @@
 <body>
     <table border="1" cellspacing="0" >
         <tr>
-            <th><a href="UserServlet?action=userPage&currentPage1">展示用户数据</a></th>
+            <th><a href="/user/userPage">展示用户数据</a></th>
         </tr>
         <tr>
-            <th><a href="GoodsInfoServlet?action=getPage&currentPage1">展示商品数据</a></th>
+            <th><a href="/goods/goodsPage">展示商品数据</a></th>
         </tr>
     </table>
 </body>

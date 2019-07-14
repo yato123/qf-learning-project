@@ -1,6 +1,4 @@
-<%@ page import="com.qf.one.userDao.userDaoImpl.GoodsInfoDaoImpl" %>
-<%@ page import="entity.GoodsInfo" %>
-<%@ page import="java.util.List" %><%--
+<%--
   Created by IntelliJ IDEA.
   User: 63531
   Date: 2019/6/20
@@ -20,6 +18,8 @@
 //        List<GoodsInfo> goodsInfos = goodsInfoDao.QueryAll();
 //        System.out.println(goodsInfos);
 //        request.getSession().setAttribute("List", goodsInfos);
+        System.out.println("111:"+request.getContextPath());
+        System.out.println(request.toString());
     %>
 
 
@@ -49,7 +49,7 @@
             </c:forEach><br/>
             <tr>
                 <td colspan="6" style="text-align: center; font-size: 30px">
-                    <a href="<%=request.getContextPath()%>/insert.jsp"> 添加</a>
+                    <a href="<%=request.getContextPath()%>/WEB-INF/insert.jsp"> 添加</a>
                 </td>
             </tr>
         </table>

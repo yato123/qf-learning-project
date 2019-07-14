@@ -9,7 +9,7 @@
 <html>
 <head>
     <title>Title</title>
-    <script type="text/javascript" src="js/jquery-1.8.2.js"></script>
+    <script type="text/javascript" src="../../js/jquery-1.8.2.js"></script>
     <script type="text/javascript" >
         $(function () {
             $("#rep").click(function () {
@@ -19,7 +19,7 @@
     </script>
     <style type="text/css">
         body {
-            background-image: url("images/lyr.jpg");
+            background-image: url("../../images/lyr.jpg");
             text-align: center;
             display: flex;
             justify-content: center;
@@ -53,7 +53,7 @@
 <body>
     <div id="login" >
 
-        <form action="UserServlet?action=login" method="post">
+        <form action="/user/login" method="post">
             ${msg}
         <input type="text" placeholder="请输入用户名" name="username"  ><br/>
         <input type="password" placeholder="密码" name="password" ><br/>

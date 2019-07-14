@@ -1,5 +1,7 @@
 package entity;
 
+import org.springframework.web.multipart.MultipartFile;
+
 public class GoodsInfo {
     private Integer id;
     private String goodsInfo_name;
@@ -8,7 +10,15 @@ public class GoodsInfo {
     private String goodsInfo_description;
     private String goods_stock;
     private String goods_flag;
+    private MultipartFile file;
 
+    public MultipartFile getFile() {
+        return file;
+    }
+
+    public void setFile(MultipartFile file) {
+        this.file = file;
+    }
 
     public GoodsInfo() {
     }

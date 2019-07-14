@@ -14,6 +14,7 @@ import java.util.List;
 public class UserDaoImpl implements IUserDao {
     @Override
     public boolean CheckRegister(String username) {
+        System.out.println("3"+username);
         Connection connection = DBUtils.getConnection();
         PreparedStatement ps = null;
         ResultSet resultSet = null;
@@ -22,12 +23,13 @@ public class UserDaoImpl implements IUserDao {
             ps.setString(1,username);
             resultSet = ps.executeQuery();
             while (resultSet.next()){
+                System.out.println("true");
                 return true;
             }
         } catch (SQLException e) {
             e.printStackTrace();
         }
-
+        System.out.println("false");
         return false;
     }
 

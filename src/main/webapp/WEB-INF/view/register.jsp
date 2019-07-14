@@ -15,7 +15,7 @@
         }
     </style>
 
-    <script type="text/javascript" src="js/jquery-1.8.2.js"></script>
+    <script type="text/javascript" src="../../js/jquery-1.8.2.js"></script>
     <script type="text/javascript">
         $(function () {
             var flag=false;
@@ -53,15 +53,15 @@
                 }
             })
             $("input:eq(0)").blur(function (){
-                $.post("UserServlet",
-                    {action:'checkUser',username:$(this).val()},
+                $.post("/user/checkUser",
+                    {username:$(this).val()},
                     function (data) {
-                    if (data == 1){
+                    if (data == 0){
                         $("span:eq(0)").html("用户名可用");
                         $("span:eq(0)").css("color","green");
                         $("input:eq(0)").css("color","green");
                     }
-                    else if(data == 0){
+                    else if(data == 1){
                         $("span:eq(0)").html("用户名已存在");
                         $("span:eq(0)").css("color","red");
                         $("input:eq(0)").css("color","red");
@@ -83,7 +83,7 @@
     </script>
     <style type="text/css">
         body{
-            background: url("images/yoona.jpg") ;
+            background: url("../../images/yoona.jpg") ;
             /*background-repeat: no-repeat;*/
             /*background-size: 100%;*/
             display: flex;
@@ -94,7 +94,7 @@
         }
         #div{
             width: 400px;
-            height: 280px;
+            height: 300px;
             background: rgba(251, 251, 255,0.3);
             line-height: 100%;
             display: flex;
@@ -110,12 +110,19 @@
         #div2{
             text-align: center;
         }
+        form{
+            color: purple;
+        }
+        p{
+            color: red;
+        }
     </style>
 </head>
 <body>
     <div id="div">
-    <form action="UserServlet?action=register" method="post" accept-charset="UTF-8">
-        ${msg}
+
+    <form action="/user/register" method="post" accept-charset="UTF-8">
+            ${msg}<br/>
      用户名:<input type="text" name="username" class="input" style="margin-top: 20px"><span></span><br/>
      密码:<input type="password" name="password" class="input"><span></span><br/>
      确认密码:<input type="password" name="pwd" class="input"><span></span><br/>
@@ -139,8 +146,5 @@
             </div>
     </form>
     </div>
-
-
-
 </body>
 </html>

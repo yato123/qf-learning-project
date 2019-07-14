@@ -1,10 +1,12 @@
 package service.Impl;
 
 import entity.GoodsInfo;
+import org.springframework.stereotype.Service;
 import service.IGoodsInfoService;
 import userDao.IGoodsInfoDao;
 import userDao.userDaoImpl.GoodsInfoDaoImpl;
 
+@Service
 public class GoodsInfoService implements IGoodsInfoService{
     IGoodsInfoDao iGoodsInfoDao = new GoodsInfoDaoImpl();
     GoodsInfo goodsInfo = null;

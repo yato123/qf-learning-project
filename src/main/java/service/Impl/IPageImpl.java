@@ -3,10 +3,11 @@ package service.Impl;
 
 
 import entity.Page;
+import org.springframework.stereotype.Service;
 import service.IPage;
 import userDao.IGoodsInfoDao;
 import userDao.userDaoImpl.GoodsInfoDaoImpl;
-
+@Service
 public class IPageImpl implements IPage {
     private IGoodsInfoDao goodsInfoDao = new GoodsInfoDaoImpl();
     @Override
@@ -19,7 +20,7 @@ public class IPageImpl implements IPage {
         //设置总条数
         page.setTotalCount(goodsInfoDao.getTotalCount());
         //设置url
-        page.setUrl("GoodsInfoServlet");
+//        page.setUrl("GoodsInfoServlet");
         //设置每页展示的数据
         page.setList(goodsInfoDao.getList((page.getCurrentPage()-1)*page.getPageSize(),page.getPageSize()));
 

@@ -64,6 +64,9 @@ public class DBManager {
                 //通过反射获取对象的所有属性的对象
                 Field[] fields = clazz.getDeclaredFields();
                 for (Field field : fields) {
+                    if ("file".equals(field.getName())){
+                        continue;
+                    }
                     //取消访问权限
                     field.setAccessible(true);
                     //获取属性名
@@ -105,6 +108,8 @@ public class DBManager {
         }
         return count;
     }
+
+
 
 
 }

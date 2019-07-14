@@ -8,6 +8,7 @@ public interface IUserService {
      * @return
      */
     boolean userLogin(User user);
-    boolean checkUser(String username);
+    boolean checkUser(String username,String password);
+    boolean checkUserName(String username);
     boolean register(User user);
 }

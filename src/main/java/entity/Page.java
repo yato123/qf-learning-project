@@ -72,4 +72,16 @@ public class Page {
     public int getPageCount() {
         return pageCount;
     }
+
+    @Override
+    public String toString() {
+        return "Page{" +
+                "currentPage=" + currentPage +
+                ", totalCount=" + totalCount +
+                ", pageCount=" + pageCount +
+                ", pageSize=" + pageSize +
+                ", url='" + url + '\'' +
+                ", list=" + list +
+                '}';
+    }
 }

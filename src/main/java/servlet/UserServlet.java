@@ -52,8 +52,8 @@ public class UserServlet extends HttpServlet {
                 req.getRequestDispatcher("userall.jsp").forward(req,resp);
                 break;
             case "checkUser":
-
-                if (iUserService.checkUser(username)){
+                System.out.println("userServlet");
+                if (iUserService.checkUser(username,password)){
                     resp.getWriter().write("1");
                 }else {
                     resp.getWriter().write("0");

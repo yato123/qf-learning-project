@@ -13,10 +13,10 @@
       <script type="text/javascript">
           $(function () {
               $("input:eq(0)").click(function () {
-                  location.href="register.jsp";
+                  location.href="/toregister";
               })
               $("input:eq(1)").click(function () {
-                  location.href="login.jsp";
+                  location.href="/tologin";
               })
           })
       </script>
