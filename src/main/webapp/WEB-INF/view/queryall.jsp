@@ -40,7 +40,7 @@
                 <td>${goodsInfo.goodsInfo_price}</td>
                 <td>${goodsInfo.goodsInfo_description}</td>
                 <td>${goodsInfo.goods_stock}</td>
-                <td><img src="<%=request.getContextPath()%>/img/${goodsInfo.goodsInfo_pic}"  width="100px"></img></td>
+                <td><img src="<%=request.getContextPath()%>/images/img/${goodsInfo.goodsInfo_pic}"  width="100px"></img></td>
                 <td>
                     <a href="<%=request.getContextPath()%>/GoodsInfoServlet?action=delete&id=${goodsInfo.id}">删除|</a>
                     <a href="update.jsp?id=${goodsInfo.id}">编辑</a>
